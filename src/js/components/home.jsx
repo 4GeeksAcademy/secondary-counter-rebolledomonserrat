@@ -6,12 +6,16 @@ const Home = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setSeconds((prev) => prev + 1);
+      setSeconds((prev) => prev + 1); 
     }, 1000);
     return () => clearInterval(interval);
   }, []);
 
-  return <SecondsCounter seconds={seconds} />;
+  return (
+    <div style={{backgroundColor:"black",height: "100vh",display: "flex", justifyContent:"center", alignItems: "center", }}>
+      <SecondsCounter seconds={seconds}/>
+    </div>
+  );
 };
 
 export default Home;
