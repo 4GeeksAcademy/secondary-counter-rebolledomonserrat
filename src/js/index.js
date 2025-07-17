@@ -13,7 +13,17 @@ const renderCounter = () => {
   }
 
   const root = ReactDOM.createRoot(rootElement);
-  root.render(<SecondsCounter seconds={counter} />);
+  root.render(
+    <div style={{
+      backgroundColor: "black",
+      height: "100",
+      display:"flex",
+      justifyContent:"center",
+      alignItems: "center"
+        }}>
+          <SecondsCounter seconds={counter}/>
+        </div>
+  );
   counter++;
 };
 
